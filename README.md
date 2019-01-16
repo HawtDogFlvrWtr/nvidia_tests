@@ -1,2 +1,2 @@
 # nvidia_tests
-Testing grid nvidia garbage
+Testing nvidia garbage
