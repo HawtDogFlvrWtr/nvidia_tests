@@ -19,6 +19,8 @@ if len(deviceCount) > 0:
         			print("Attempting to set the max MEM and SM clocks for each interface.")
 				nvmlDeviceSetApplicationsClocks(handle, nvmlDeviceSetApplicationsClocks(handle, NVML_CLOCK_SM)) # Set max SM
 				nvmlDeviceSetApplicationsClocks(handle, nvmlDeviceSetApplicationsClocks(handle, NVML_CLOCK_MEM)) # Set max Mem
+			else:
+				print("Not setting the max clocks because \"setmaxclock\" wasn't sent as an argument")
 		except NVMLError as error:
 			print(error)
 else:
