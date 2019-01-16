@@ -14,7 +14,7 @@ if len(deviceCount) > 0:
 			fanSpeed = nvmlDeviceGetFanSpeed(handle)
 			print("ID, Name, Fan RPM, MaxSM, MaxMem")
 			print("{}: {}, {}, {}, {}".format(i, deviceName, fanSpeed, maxSM, maxMem))
-			# Check if we have perms to actually set the clocks correctly
+			# If setmaxclock is set, try to set those puppies.
 			if sys.argv[1] is "setmaxclock":
         			print("Attempting to set the max MEM and SM clocks for each interface.")
 				nvmlDeviceSetApplicationsClocks(handle, nvmlDeviceSetApplicationsClocks(handle, NVML_CLOCK_SM)) # Set max SM
